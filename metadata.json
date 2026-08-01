@@ -1,0 +1,6 @@
+{
+  "name": "Flash DSA Docs",
+  "description": "Quick revision documentation for Data Structures and Algorithms course.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
