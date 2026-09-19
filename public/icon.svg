@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#311042" />
+    </linearGradient>
+
+    <!-- Stack Layer Gradient -->
+    <linearGradient id="layerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <!-- Top Stack Active Gradient -->
+    <linearGradient id="topLayerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+
+    <!-- Lightning Bolt Flash Gradient -->
+    <linearGradient id="flashGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="50%" stop-color="#fde047" />
+      <stop offset="100%" stop-color="#eab308" />
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Container Base -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+  <rect width="504" height="504" x="4" y="4" rx="108" fill="none" stroke="#6366f1" stroke-width="6" stroke-opacity="0.3" />
+
+  <!-- Stack Layers (Isometric Data Structure Representation) -->
+  <g transform="translate(256, 275)">
+    <!-- Bottom Layer 3 -->
+    <path d="M -130 50 L 0 90 L 130 50 L 0 10 Z" fill="#334155" opacity="0.6" />
+    <path d="M -130 50 L 0 90 L 130 50 L 130 65 L 0 105 L -130 65 Z" fill="#1e293b" opacity="0.8" />
+
+    <!-- Middle Layer 2 -->
+    <path d="M -130 -10 L 0 30 L 130 -10 L 0 -50 Z" fill="url(#layerGrad)" opacity="0.85" />
+    <path d="M -130 -10 L 0 30 L 130 -10 L 130 5 L 0 45 L -130 5 Z" fill="#6366f1" opacity="0.9" />
+
+    <!-- Top Active Layer 1 -->
+    <path d="M -130 -70 L 0 -30 L 130 -70 L 0 -110 Z" fill="url(#topLayerGrad)" filter="url(#glow)" />
+    <path d="M -130 -70 L 0 -30 L 130 -70 L 130 -55 L 0 -15 L -130 -55 Z" fill="#0284c7" />
+  </g>
+
+  <!-- Flash Lightning Icon Overlay -->
+  <path d="M 270 90 L 180 240 L 250 240 L 220 370 L 330 210 L 260 210 Z" 
+        fill="url(#flashGrad)" 
+        filter="url(#glow)"
+        stroke="#78350f" 
+        stroke-width="4" 
+        stroke-linejoin="round" />
+</svg>
